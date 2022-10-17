@@ -12,7 +12,8 @@ namespace Circulo
         static void Main(string[] args)
         {
             //Practica1();
-            Practica2();
+            //Practica2();
+            Practica3();
         }
 
         #region Practica1
@@ -32,7 +33,6 @@ namespace Circulo
         }
 
         #endregion
-
 
         #region Practica2
 
@@ -72,9 +72,39 @@ namespace Circulo
 
 
             }
+        }
 
-            #endregion
+        #endregion
+
+        #region Practica3
+
+        static void Practica3()
+        {
+
+            Console.WriteLine("¿Quieres entrar? S/N");
+
+            Console.Write("respuesta: ");
+            string respuesta2 = LeerRespuesta(Console.ReadLine());
+            Console.WriteLine("Bien, has introducido S o N"); ;
+        }
+
+        static string LeerRespuesta(string respuesta)
+        {
+
+            while (respuesta != "S" && respuesta != "N")
+            {
+
+                Console.Write("El valor no es correcto, debe ser una S o una N: ");
+                respuesta = Console.ReadLine();
+            }
+
+            return respuesta;
 
         }
+
+        #endregion
+
+
+
     }
 }
