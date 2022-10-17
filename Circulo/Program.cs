@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Circulo
@@ -13,7 +14,8 @@ namespace Circulo
         {
             //Practica1();
             //Practica2();
-            Practica3();
+            //Practica3();
+            Practica4();
         }
 
         #region Practica1
@@ -104,7 +106,33 @@ namespace Circulo
 
         #endregion
 
+        #region Practica4
+
+        static void Practica4()
+        {
+
+            Console.WriteLine("¿Quieres entrar? S/N");
+
+            Console.Write("respuesta: ");
+            string respuesta2 = LeerRespuestaModificado(Console.ReadLine());
+            Console.WriteLine("Bien, has introducido S o N");
 
 
+        }
+        static string LeerRespuestaModificado(string respuesta)
+        {
+
+            do
+            {
+
+                Console.Write("El valor no es correcto, debe ser una S o una N: ");
+                respuesta = Console.ReadLine();
+            } while (respuesta != "S" && respuesta != "N"); 
+
+            return respuesta;
+
+        }
+
+        #endregion
     }
 }
